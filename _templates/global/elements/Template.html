@@ -1,0 +1,35 @@
+{{ extends "otree/Page.html" }}
+
+{{ block content }}
+  <head>
+    <meta charset="utf-8">
+    <title>My Template</title>
+    {{ load static }}
+    <link rel="stylesheet" type="text/css" href="{{ static 'global/css/template.css'}}">
+  </head>
+  <body>
+    <div class="box-container">
+      <div class="box box-1">
+        {{ block box-1 }}
+        {{ endblock }}
+      </div>
+      <div class="box box-2">
+        {{ block box-2 }}
+        {{ endblock }}
+      </div>
+      <div class="box box-3">
+        {{ block box-3 }}
+        {{ endblock }}
+      </div>
+      <div class="box box-4">
+        {{ block box-4 }}
+        {{ endblock }}
+      </div>
+      <div class="box box-5">
+        {{ block box-5 }}
+        {{ endblock }}
+      </div>
+    </div>
+  </body>
+{{ endblock }}
+

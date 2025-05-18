@@ -1,0 +1,36 @@
+<head>
+    <script src="https://kit.fontawesome.com/456d05cc1f.js" crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+    <table class="table" style="width: auto" title="Costs">
+        {{if player.id_in_group == 1}}<i class="fa-solid fa-shop"></i>
+        {{else}}<i class="fa-solid fa-industry"></i>
+        {{endif}}
+        <h4> {{player.role()}}</h4>  <br>
+        <i class="fa-solid fa-boxes-stacked"></i> Inventory: {{player.inventory}}
+        <br><br>
+
+        <tr>
+            <th>Open Customer Orders</th>
+            <td>{{player.backlog_demand_cumulated}}</td>
+        </tr>
+        <tr>
+            <th>Total Fulfilled Orders </th>
+            <td>{{player.fulfilledDemand}}</td>
+        </tr>
+        <tr>
+            <th>Total Costs Backorders</th>
+            <td>{{player.totalCostsBackorders}}</td>
+        </tr>
+        <tr>
+            <th>Total Costs Inventory</th>
+            <td>{{player.totalCostsInventory}}</td>
+        </tr>
+        <tr>
+            <th>Total turnover</th>
+            <td>{{player.turnover}}</td>
+        </tr>
+    </table>
+</body>

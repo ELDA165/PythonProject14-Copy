@@ -1,0 +1,35 @@
+<body>
+    <h3>The Graphical User Interface:</h3>
+    <br/>
+    {{if participant.roleID == 1}}
+        {{if participant.treatment == 1}}
+            <img src="{{ static 'global/img/RetailerNoDSS.png'}}" width="85%" />
+        {{if participant.treatment ==2 }}
+            <img src="{{ static 'global/img/RetailerStaticDSS.png'}}" width="85%" />
+        {{if participant.treatment ==3 }}
+            <img src="{{ static 'global/img/RetailerDynamicDSS.png'}}" width="85%" />
+        {{endif}}
+    {{else}}
+        {{if participant.treatment == 1}}
+            <img src="{{ static 'global/img/FactoryNoDSS.png'}}" width="85%" />
+        {{if participant.treatment ==2 }}
+            <img src="{{ static 'global/img/FactoryStaticDSS.png'}}" width="85%" />
+        {{if participant.treatment ==3 }}
+            <img src="{{ static 'global/img/FactoryDynamicDSS.png'}}" width="85%" />
+        {{endif}}
+    {{endif}}
+
+    <p>
+        <br/><br/>
+        <h4>This is what your game interface looks like.</h4>
+        <br/>
+        On the left side you can see your current inventory, how many orders are unfulfilled, how many you have fulfilled and your costs. <br/>
+        {{if participant.treatment ==2 }}
+            On the right side you see a button. When you click the button, you will receive a suggestion on what to order.<br/>
+        {{if participant.treatment ==3 }}
+            On the right side you see a button. When you click the button, a window will open in which you can interact with a rule-based chatbot.
+            This chatbot can help your figure out what to order. Interact with the chatbot by entering one of the numbers corresponding with possible questions.<br/>
+        {{endif}}
+        On the right side you can see an empty box. Please enter your order quantity in there. <br/>
+    </p>
+</body>

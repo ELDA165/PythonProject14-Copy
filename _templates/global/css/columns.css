@@ -1,0 +1,80 @@
+#gameAction *{
+    box-sizing: border-box;
+    }
+
+    #gameAction body {
+    font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* Style the header */
+    #gameAction .header {
+    background-color: #f1f1f1;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    }
+
+    /* Create three equal columns that floats next to each other */
+    #gameAction .column {
+
+    width: 33.33%;
+    padding: 10px;
+    }
+
+    /* Clear floats after the columns */
+    #gameAction .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+
+    /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+    @media (max-width: 600px) {
+    #gameAction .column {
+        width: 100%;
+    }
+    }
+
+
+    /* ORDERING DECISION */
+    #order *{
+    box-sizing: border-box;
+    }
+
+    #order body {
+    font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* Style the header */
+    #order .header {
+    background-color: #f1f1f1;
+    padding: 30px;
+    width: 100%;
+    text-align: center;
+    font-size: 35px;
+    }
+
+    /* Create three equal columns that floats next to each other */
+    #order .column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    }
+
+    /* Clear floats after the columns */
+    #order .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+
+
+    /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+    @media (max-width: 600px) {
+    #order .header{
+        width: 100%;
+    }
+    #order .column {
+        width: 100%;
+    }
+    }

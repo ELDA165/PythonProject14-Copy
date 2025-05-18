@@ -1,0 +1,25 @@
+<h3>The Game:</h3>
+<br/>
+
+<img src="{{ static 'global/img/detailedSC.png'}}" width="85%" />
+
+
+<p>
+    <br/><br/>
+    <h5>Each order takes some time to arrive at the upper-tier:</h5>
+    <li>The customers' order arrives at the retailer 2 periods after it has been placed.</li>
+    <li>The retailer's order arrives at the factory {{LTR2F}} periods after it has been placed.</li>
+    <br/>
+    <h5>Each delivery takes some time to arrive at the lower-tier:</h5>
+    <li>The factory's delivery arrives at the retailer {{LTF2R}} periods after it has been sent.</li>
+    <li>The retailer's delivery arrives at the customer 2 periods after it has been sent.</li>
+    <br/>
+    <h5>The production also takes some time:</h5>
+    The factory's order needs {{LTProd}} to be produced and arrive in its inventory.
+    <br/>
+    This time difference is called <b>lead time</b>.
+
+    <br/><br/>
+    <br/><br/>
+
+</p>

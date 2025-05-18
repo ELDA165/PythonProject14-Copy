@@ -1,0 +1,24 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ static 'global/css/chatStyles.css'}}">
+</head>
+
+<body>
+    <div id = "chatbot" class="chatbot">
+        <button id="chatbot-button" type="button">Chatbot</button>
+        <div id="chatContainer" class="chat-container" >
+            <h4> Chatbot: </h4>
+            <div id ="chatMessages" class="chat-messages">
+                <p class="chatbotMessage chatbotResponse">Hello. If you want a suggestion what to order, I am here to help. <br/> <br/> Just enter one of the following numbers:<br/>(1) No, thanks.<br/>(2) Tell me how much to order!<br/>(3) Explain how I should order the order quantity!</p>
+            </div>
+            <div class="input-container">
+                <input id="user_input"class="userInput"/>
+                <button type="button" onclick="submit_msg()" class="send-button">Send</button>
+            </div>
+
+        </div>
+        <!-- hidden input to save chat log -->
+        <input type='hidden' name='chatLog' value='' id='id_chatLog'/>
+    </div>
+
+    <script src="{{ static 'global/js/chatbotScript.js'}}" defer></script>
+</body>

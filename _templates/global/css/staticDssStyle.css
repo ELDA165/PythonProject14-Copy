@@ -1,0 +1,39 @@
+#dss-content-container {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 14px;
+    box-shadow: 0 2px 10px rgba(44,62,80,0.08);
+    padding: 20px 18px;
+    height: 70px;
+    top: 12%;
+    left: 0;
+    z-index: 10000;
+}
+
+#dss-content {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+#staticDSS-button {
+    display: inline-block;
+    padding: 10px 22px;
+    border-radius: 7px;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 1px 7px rgba(44,62,80,0.08);
+    transition: background 0.18s;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 10000 !important;
+}
+#staticDSS-button:hover {
+    background-color: #217dbb;
+}

@@ -1,0 +1,34 @@
+<head>
+    <link href="{{ static 'global/css/surveyLooks.css'}}" rel = "stylesheet">
+</head>
+<body>
+    <br/>
+    <h5>In order to proceed, you have to correctly answer the following questions to the scenario information: </h5>
+
+    {{ if form.errors }}
+        <div class="overrule otree-form-errors alert alert-danger">
+            There were errors in the comprehension questions. Please revise your answers.
+        </div>
+    {{ endif }}
+
+    <div class="box">
+        <div id="survey" class="content">
+            </br>
+             <table class="table">
+                {{ for field in form }}
+                    <tr class="question">
+                        <th colspan="1">{{ field.label }}</th>
+                    </tr>
+                    {{ for choice in field }}
+                        <tr>
+                            <td class="verticalChoice">
+                                <span class="radio">{{ choice }}</span>
+                                <label for="{{ choice.id }}">{{ choice.label }}</label>
+                            </td>
+                        </tr>
+                    {{ endfor }}
+                {{ endfor }}
+            </table>
+        </div>
+    </div>
+</body>

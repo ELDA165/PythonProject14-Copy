@@ -1,0 +1,40 @@
+
+.box-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+.box {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+  border: none;
+  margin: 12px 0;
+  padding: 24px 18px;
+  transition: box-shadow 0.2s;
+  min-width: 260px;
+  flex: 1 1 40%;
+}
+.box:hover {
+  box-shadow: 0 6px 32px rgba(0,0,0,0.15);
+}
+.box-1, .box-5 {
+  width: 100%;
+  flex-basis: 100%;
+}
+.box-2, .box-3, .box-4 {
+  flex: 1 1 40%;
+}
+@media (max-width: 900px) {
+  .box-container {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .box, .box-2, .box-3, .box-4 {
+    width: 100%;
+    min-width: unset;
+  }
+}

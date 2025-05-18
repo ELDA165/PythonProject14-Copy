@@ -1,0 +1,20 @@
+{{ extends "otree/Page.html" }}
+{{ block title }}Ordering Decision {{player.role()}}{{ endblock }}
+{{block style}} <link href="{{ static 'global/css/styles.css'}}" rel = "stylesheet"> {{endblock}}
+
+{{ block content }}
+    <head>
+    <script src="https://kit.fontawesome.com/456d05cc1f.js" crossorigin="anonymous">
+    </script>
+    </head>
+
+    <body>
+    <p>Text Field above the field </p>
+    {{ include '_templates/global/elements/Ordering.html'}}
+
+    
+    </body>
+
+{{ next_button }}
+
+{{ endblock }}

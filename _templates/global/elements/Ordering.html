@@ -1,0 +1,55 @@
+<div id = "order">
+
+    <div class="header">
+    <h3>What will you do for Round {{player.round_number}}?  </h3>
+    </div>
+
+    <div class="row">
+    <div class="column" style="background-color:#aaa;">
+        <table class="table" style="width: auto" title="Costs">
+            {{if player.id_in_group == 1}}<i class="fa-solid fa-shop"></i>
+            {{else}}<i class="fa-solid fa-industry"></i>
+            {{endif}}
+            <h4> {{player.role()}}</h4>  <br>
+            <i class="fa-solid fa-boxes-stacked"></i> Inventory: {{player.inventory}}
+            <br><br><br>
+
+            <tr>
+                <th>Open Customer Orders</th>
+                <td>{{player.backlog_demand_cumulated}}</td>
+            </tr>
+            <tr>
+                <th>Total Fulfilled Orders </th>
+                <td>{{player.fulfilledDemand}}</td>
+            </tr>
+            <tr>
+                <th>Costs Backorders</th>
+                <td>{{player.totalCostsBackorders}}</td>
+            </tr>
+            <tr>
+                <th>Costs Inventory</th>
+                <td>{{player.totalCostsInventory}}</td>
+            </tr>
+            <tr>
+                <th>Total turnover</th>
+                <td>{{player.turnover}}</td>
+            </tr>
+        </table>
+
+    </div>
+    <div class="column" style="background-color:#bbb;">
+        {{if player.treatment == 2}}
+            <p><i class="fa-solid fa-lightbulb"></i> Suggestion: {{optimum}}</p>
+        {{endif}}
+        <br><br>
+        {{formfields}}
+        <br><br>
+        {{if player.treatment == 3}}
+        {{ include '_templates/global/elements/Chatbot.html'}}
+
+        {{endif}}
+    </div>
+    </div>
+</div>
+
+

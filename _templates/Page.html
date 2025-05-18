@@ -1,0 +1,21 @@
+{% extends "global/elements/Template.html" %}
+
+{% block box-1 %}
+  What happened in the past round (Round {{ player.round_number|add:"-1" }})?
+{% endblock %}
+
+{% block box-2 %}
+  <!-- Retailer info, status, etc. -->
+{% endblock %}
+
+{% block box-3 %}
+  <!-- Form fields, suggestions, chatbot, etc. -->
+{% endblock %}
+
+{% block box-4 %}
+  <button type="submit">Next</button>
+{% endblock %}
+
+{% block box-5 %}
+  <!-- (leave empty or for admin/debug use) -->
+{% endblock %}

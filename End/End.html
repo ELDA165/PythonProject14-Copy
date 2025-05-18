@@ -1,0 +1,21 @@
+{{ extends "otree/Page.html" }}
+
+{{ block title }}
+    Thank you for participating in this study.
+{{ endblock }}
+
+
+
+
+{{ block content }}
+
+    <p>
+        You have  completed the task and the surveys. <br> 
+        In the task you earned {{turnover}}. You also had the following costs for holding an inventory {{costsInv}} and for backorders {{costsBackorders}}. <br/>
+        Your total payoff is {{payoff}}. 
+    </p>
+
+
+
+{{ next_button}}
+{{ endblock }}

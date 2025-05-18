@@ -1,0 +1,19 @@
+<body>
+    <h3>The Graphical User Interface:</h3>
+    <br/>
+    {{if participant.roleID == 1}}
+        <img src="{{ static 'global/img/gameActionRetailerScreenshot.png'}}" width="85%" />
+    {{else}}
+        <img src="{{ static 'global/img/gameActionFactoryScreenshot.png'}}" width="85%" />
+    {{endif}}
+
+    <p>
+        <br/><br/>
+        <h4>After/before each round you can see what happend in the previous round.</h4>
+        <br/>
+        On the left side you can see the incoming demand and the outgoing shipments. In other words, your fulfilled orders. <br/>
+        On the right side you can see your past order placed (sent order), and your received shipments, which is added to your inventory. <br/>
+        In the middle you can see your inventory, after the incoming shipment is added and the outgoing shipments are dedacted. <br/>
+        You can also see how many orders you have not fulfilled over the past rounds.
+    </p>
+</body>

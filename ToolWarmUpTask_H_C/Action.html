@@ -1,0 +1,17 @@
+{{ extends "otree/Page.html" }}
+{{ block title }} Ordering Decision {{player.role()}}{{ endblock }}
+
+{{ block content }}
+    <head>
+    <script src="https://kit.fontawesome.com/456d05cc1f.js" crossorigin="anonymous">
+    </script>
+    </head>
+
+
+    <body>
+        {{ include '_templates/global/elements/GameAction.html'}}
+    </body>
+
+{{ next_button }}
+
+{{ endblock }}

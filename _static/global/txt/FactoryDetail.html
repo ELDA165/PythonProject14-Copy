@@ -1,0 +1,30 @@
+<h3>The Game:</h3>
+<br/>
+
+<img src="{{ static 'global/img/factoryDetailed.png'}}" width="85%" />
+
+
+<p>
+    <br/><br/>
+    <h4>You are the <b>{{participant.role}}</b>.</h4>
+    <br/>
+    <li>Each round you receive an <b>order by the retailer</b>, which you need to fulfill.
+        This order is fulfilled with the products in your inventory.</li>
+    <li>If you cannot fulfill the orders, then you will have unfulfilled orders (i.e., backorders), which need to be fulfilled in
+        the next rounds.</li>
+    <li>Your initial backorders are {{initBackl}}.</li>
+    <br/>
+    <li>Each round you receive a <b>incoming shipment</b>, based on what you ordered in the past.
+        This shipment will be added to your inventory.</li>
+    <li>If not all products in your inventory are needed, then you will have products left in your inventory.</li>
+    <li>Your initial inventory is {{initInv}}.</li>
+    <br/>
+    <li>Each delivered item results in a turnover of {{turnover}} per item.</li>
+    <li>For each backorder item you have {{costsBackl}} per period.</li>
+    <li>For each item in your inventory, you pay {{costsInv}} per period.</li>
+
+    <br/><br/>
+    <h6>Your task is to place a production order. </h6>
+    <br/><br/>
+
+</p>

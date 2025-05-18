@@ -1,0 +1,42 @@
+<head>
+    <script src="https://kit.fontawesome.com/456d05cc1f.js" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" type="text/css" href="{{ static 'global/css/gameActionStyles.css'}}">
+
+</head>
+
+<body>
+    <div id = "gameAction">
+    <div class="header">
+        <h3>What happened in the past round (Round {{round_past}})?  </h3>
+    </div>
+
+    <div class="row">
+        <div class="column" style="background-color:#aaa;">
+            <p>
+                <i class="fa-solid fa-envelope"></i> <span>&#10230;</span> Incoming Demand: {{player.incomingDemand}}
+                <br><br> <br><br>
+                <i class="fa-solid fa-truck fa-flip-horizontal"></i> <span>&#10229;</span> Outgoing Shipment: {{player.outgoingDelivery}}
+
+            </p>
+        </div>
+        <div class="column" style="background-color:#bbb;">
+            {{if player.id_in_group == 1}}<i class="fa-solid fa-shop"></i>
+            {{else}}<i class="fa-solid fa-industry"></i>
+            {{endif}}
+            <h4> {{player.role()}}</h4>  <br>
+            <i class="fa-solid fa-boxes-stacked"></i> <br>
+            Inventory after outgoing shipment: {{player.inventory}} <br>
+            Unfulfilled Orders (Demand Backlog): {{player.backlog_demand_cumulated}} <br>
+        </div>
+        <div class="column" style="background-color:#ccc;">
+            <p>
+                <i class="fa-solid fa-envelope"></i> <span>&#10230;</span> Sent Order: {{last_order}}
+                <br><br> <br><br>
+                <i class="fa-solid fa-truck fa-flip-horizontal"></i> <span>&#10229;</span> Received Shipment: {{player.incomingDelivery}}
+            </p>
+        </div>
+    </div>
+</body>
+
+

@@ -1,0 +1,19 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ static 'global/css/staticDssStyles.css'}}">
+</head>
+
+
+<body>
+    <form id="dss-form">
+        <button id="staticDSS-button">Suggestion</button>
+        <input type="hidden" name="dssButtonClicked" value="false">
+    </form>
+    <div id="dss-content-container">
+        <div id="dss-content" style="display:none;">
+            <p><i class="fa-solid fa-lightbulb"></i> Suggestion: {{optimum}}</p>
+        </div>
+    </div>
+
+    <script src="{{ static 'global/js/staticDssScript.js'}}" defer></script>
+
+</body>

@@ -1,0 +1,25 @@
+{{ extends "otree/Page.html" }}
+
+{{ block content }}
+
+    <body>
+        {{if roleIdIs1 }}
+            {{ include '_static/global/txt/RetailerDetail.html'}}
+        {{else}}
+            {{ include '_static/global/txt/FactoryDetail.html'}}
+        {{endif}}
+        <br/>
+        {{if gameIsHH}}
+            {{ include '_static/global/txt/treatmentDetailHH.html'}}
+        {{else}}
+            {{ include '_static/global/txt/treatmentDetailHC.html'}}
+        {{endif}}
+        <br/>
+        <br/>
+        {{ include '_templates/global/elements/ControlQuestions.html'}}
+
+    </body>
+
+{{ next_button }}
+
+{{ endblock }}

@@ -5,7 +5,7 @@ from constant import *
 author = "Viviana M. Oberhofer viviana.oberhofer@uibk.ac.at"
 
 doc = """
-Task Instructions
+Task TaskInstructions
 """
 
 

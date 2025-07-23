@@ -1,0 +1,71 @@
+
+#survey {
+    border-style: hidden;
+}
+
+#survey .table {
+    table-layout: fixed;
+    width: 100%;
+    word-break: break-word;
+}
+
+#survey .table th {
+    border: unset;
+    width: 50%
+}
+
+#survey .table td {
+    width: 10%;
+}
+#survey tr.questionLabels {
+    font-size:  12px;
+}
+#survey tr.question {
+    background-color: #e9ecef;
+}
+
+
+#survey label {
+    display: contents;
+}
+
+#survey tr{
+    border-style: hidden;
+}
+
+#survey td{
+    padding: 0.5rem;
+    text-align: center;
+}
+
+#survey td.verticalChoice {
+    padding: 0.5rem;
+    text-align: left;
+}
+
+#survey th{
+    padding: 0.25rem;
+}
+
+#survey .form-check-input {
+    position: relative;
+    margin-top: .3rem;
+    margin-left: 0;
+}
+
+#HSExplanationDiv {
+    margin: 1rem;
+    display: flex;
+    place-content: center;
+}
+
+.explanationDivImg {
+    width: 50%;
+    display: flex;
+    margin: auto;
+}
+
+#HSExplanationDiv input {
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}

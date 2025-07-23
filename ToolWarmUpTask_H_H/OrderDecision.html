@@ -1,0 +1,33 @@
+{{ extends 'global/elements/Template.html' }}
+{{ block title }}Ordering Decision {{player.role()}}{{ endblock }}
+
+{{ block box-2 }}
+    <p>Box 2</p>
+    {{ include '_templates/global/elements/PastOrderData.html'}}
+{{ endblock }}
+
+
+{{block box-3}}
+    <body>
+        <p>Box 3</p>
+
+        {{formfield 'order_t'}}
+    </body>
+{{endblock}}
+
+{{block box-4}}
+    <p>Box 4</p>
+
+    {{if player.treatment == 2}}
+        {{ include '_templates/global/elements/StaticDSS.html' }}
+    {{endif}}    
+    {{if player.treatment == 3}}
+        {{ include '_templates/global/elements/Chatbot.html' }}
+    {{endif}}
+
+{{endblock}}
+
+
+{{block box-5}}
+    {{ next_button }}
+{{endblock}}
